@@ -100,6 +100,7 @@
       // append the chat text message
       socket.on('chat_message', function (msg) {
         $('#messages').append($('<li>').html(msg));
+        $('#messages').length;
         $('html,body').animate(
           { scrollTop: document.body.scrollHeight },
           'fast'
