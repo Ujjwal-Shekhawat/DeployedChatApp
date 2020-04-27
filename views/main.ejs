@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Chat App</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" media="screen" href="ios.css" />
+    <style></style>
     <script src="/socket.io/socket.io.js"></script>
   </head>
+
   <body>
     <main>
       <section>
-        <p>Hey 😊</p>
+        <p>Chat App</p>
         <br />
-        <p>Hi there!</p>
+        <p>Joined Chat</p>
         <br />
       </section>
       <div>
@@ -30,6 +31,8 @@
     <script>
       var socket = io();
 
+      var username = prompt('Whats your name');
+
       var form = document.querySelector('form');
 
       form.addEventListener('submit', function (e) {
@@ -44,9 +47,10 @@
         if (!text) {
           return;
         }
+
         var container = document.querySelector('section');
         var newMessage = document.createElement('p');
-        newMessage.innerText = text;
+        newMessage.innerText = username + ' ' + text;
         container.appendChild(newMessage);
 
         var seperator = document.createElement('br');
