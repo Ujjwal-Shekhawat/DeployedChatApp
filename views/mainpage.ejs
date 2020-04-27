@@ -21,13 +21,7 @@
         border-top-style: solid;
         border-top-width: 1px;
       }
-      form input {
-        border-style: solid;
-        border-width: 1px;
-        padding: 10px;
-        width: 85%;
-        margin-right: 0.5%;
-      }
+
       form button {
         width: 9%;
         background: rgb(130, 224, 255);
@@ -35,6 +29,15 @@
         padding: 10px;
         margin-left: 2%;
       }
+
+      form input {
+        border-style: solid;
+        border-width: 1px;
+        padding: 10px;
+        width: 85%;
+        margin-right: 0.5%;
+      }
+
       #messages {
         list-style-type: none;
         margin: 0;
@@ -59,7 +62,8 @@
         autofocus="on"
         oninput="isTyping()"
         placeholder="type your message here..."
-      /><button>Send</button>
+      />
+      <button>Send</button>
     </form>
     <script>
       var socket = io();
