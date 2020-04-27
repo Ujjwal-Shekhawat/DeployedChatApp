@@ -4,7 +4,8 @@
   "description": "Chat Application First",
   "main": "mainscript.js",
   "scripts": {
-    "start": "node mainscript"
+    "start": "node mainscript",
+    "server": "nodemon mainscript"
   },
   "author": "Ujjwal Singh Shekhawat",
   "license": "MIT",
@@ -12,5 +13,9 @@
     "ejs": "^3.1.2",
     "express": "^4.17.1",
     "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
   }
 }
