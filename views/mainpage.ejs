@@ -32,7 +32,8 @@
   </head>
   <body>
     <nav class="navbar navbar-light bg-light navbar-height: 500px" style="max-height: 1000px;">
-      <a class="navbar-brand" href="#">Home</a>
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="https://desolate-plains-00303.herokuapp.com/">Go back</a>
     </nav>
     <div id="mydiv">
       <ul id="messages"></ul>
@@ -73,6 +74,9 @@
       });
       // ask username
       var username = prompt('Please tell me your name');
+      if(username == null || username == undefined || username == '') {
+        username = 'Anonymous';
+      }
       socket.emit('username', username);
     </script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
