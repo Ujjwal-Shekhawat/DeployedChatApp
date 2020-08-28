@@ -75,7 +75,7 @@
       // ask username
       var username = prompt('Please tell me your name');
       if(username == null || username == undefined || username == '') {
-        username = 'Anonymous';
+        username = 'Anonymous'; 
       }
       socket.emit('username', username);
     </script>
